@@ -67,21 +67,13 @@ const HeroCanvas = () => {
 
   return (
     <div ref={containerRef} className="relative w-full h-[250vh] bg-black">
-      {/* Loading Screen */}
-      {!loaded && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-[#0c0c0c]">
-          <div className="text-white/50 font-body uppercase tracking-[0.2em] text-sm animate-pulse">
-            Loading Cinematic Video...
-          </div>
-        </div>
-      )}
 
       <div className="sticky top-0 w-full h-screen overflow-hidden">
         {/* We use a video element instead of a canvas to natively scrub through the .mp4 */}
         <video
           ref={videoRef}
           src={videoFile}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-top"
           muted
           loop
           autoPlay

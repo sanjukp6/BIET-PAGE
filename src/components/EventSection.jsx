@@ -63,7 +63,7 @@ const EventSection = () => {
           <img 
             src={eventImg} 
             alt="BIET Campus Atmosphere"
-            className="w-full h-full object-cover filter brightness-[0.85] contrast-[1.1] hover:scale-105 transition-transform duration-[2s] ease-out"
+            className="w-full h-full object-cover object-top filter brightness-[0.85] contrast-[1.1] hover:scale-105 transition-transform duration-[2s] ease-out"
           />
         </motion.div>
       </div>

@@ -36,7 +36,7 @@ const CTASection = () => {
         style={{ y: backgroundY }}
         className="absolute inset-0 bg-cover bg-center opacity-20 filter grayscale"
       >
-        <img src={ctaImg} alt="Campus" className="w-full h-full object-cover" />
+        <img src={ctaImg} alt="Campus" className="w-full h-full object-cover object-top" />
       </motion.div>
       
       <div className="absolute inset-0 bg-gradient-to-t from-background via-background/90 to-transparent"></div>
