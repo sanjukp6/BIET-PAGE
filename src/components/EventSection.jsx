@@ -19,36 +19,56 @@ const EventSection = () => {
           transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
           className="space-y-12 lg:col-span-5"
         >
-          <div className="flex items-center space-x-6">
-            <span className="text-accent uppercase tracking-[0.3em] font-light text-xs">About The Institute</span>
-            <div className="flex-1 h-[1px] bg-accent/30"></div>
+          <div className="flex items-center gap-6">
+            <span className="text-accent uppercase tracking-[0.6em] font-light text-[10px] whitespace-nowrap">The Institution</span>
+            <div className="w-full h-[1px] bg-gradient-to-r from-accent/40 to-transparent"></div>
           </div>
           
-          <h2 className="text-5xl md:text-6xl font-heading leading-snug tracking-wide text-white">
-            <span className="italic font-light">Excellence.</span><br/>
-            Innovation.<br/>
-            <span className="text-gray-400">Technology.</span>
-          </h2>
-          
-          <p className="text-gray-400 text-base leading-loose font-light">
-            Welcome to the Bapuji Institute of Engineering and Technology. 
-            With an 'A' grade accreditation by NAAC, BIET stands as an autonomous, premier 
-            institution in Davanagere. Join our vast community of students across core domains like 
-            AI, Machine Learning, Data Science, and Engineering.
-          </p>
+          <div className="space-y-4">
+            <h2 className="text-6xl md:text-7xl font-heading leading-[1.1] tracking-tight text-white mb-8">
+              <motion.span 
+                initial={{ opacity: 0, x: -20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                className="block italic font-light text-white/90"
+              >
+                Excellence.
+              </motion.span>
+              <motion.span 
+                initial={{ opacity: 0, x: -20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                className="block font-light"
+              >
+                Innovation.
+              </motion.span>
+              <motion.span 
+                initial={{ opacity: 0, x: -20 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                transition={{ duration: 1.2, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                className="block text-accent/80 gold-glow"
+              >
+                Technology.
+              </motion.span>
+            </h2>
+            
+            <p className="text-white/50 text-xs md:text-sm leading-loose font-light tracking-wide max-w-lg italic">
+              A "Reputed Scientific Institute" recognized by NRCD, BIET is home to the AICTE IDEA Lab and the IBM Centre of Excellence. Join our legacy of innovation across core domains like AI, Data Science, and Engineering.
+            </p>
+          </div>
 
-          <div className="pt-8 flex justify-between border-t border-white/5">
-            <div>
-              <div className="text-3xl font-heading text-white mb-2">1979</div>
-              <div className="text-[10px] text-accent uppercase tracking-[0.2em]">Established</div>
+          <div className="pt-12 grid grid-cols-3 gap-8 border-t border-white/10">
+            <div className="group">
+              <div className="text-4xl font-heading text-white mb-2 group-hover:text-accent transition-colors duration-500 shimmer-text">1979</div>
+              <div className="text-[9px] text-white/40 uppercase tracking-[0.3em] font-medium">Est.</div>
             </div>
-            <div>
-              <div className="text-3xl font-heading text-white mb-2">'A'</div>
-              <div className="text-[10px] text-accent uppercase tracking-[0.2em]">NAAC Grade</div>
+            <div className="group">
+              <div className="text-4xl font-heading text-white mb-2 group-hover:text-accent transition-colors duration-500 shimmer-text">A</div>
+              <div className="text-[9px] text-white/40 uppercase tracking-[0.3em] font-medium">NAAC</div>
             </div>
-            <div>
-              <div className="text-3xl font-heading text-white mb-2">10+</div>
-              <div className="text-[10px] text-accent uppercase tracking-[0.2em]">Domains</div>
+            <div className="group">
+              <div className="text-4xl font-heading text-white mb-2 group-hover:text-accent transition-colors duration-500 shimmer-text">10+</div>
+              <div className="text-[9px] text-white/40 uppercase tracking-[0.3em] font-medium">Domains</div>
             </div>
           </div>
         </motion.div>

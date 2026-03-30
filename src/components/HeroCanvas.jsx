@@ -85,23 +85,35 @@ const HeroCanvas = () => {
         <div className="absolute inset-0 bg-black/50 pointer-events-none"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent pointer-events-none"></div>
 
-        {/* Text Overlay - Animated based on overall page scroll, decoupled from canvas */}
         <div className="absolute inset-0 flex items-center justify-center flex-col pointer-events-none z-10 px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, ease: "easeOut", delay: 0.5 }}
+            transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
             className="text-center"
           >
-            <h1 className="text-5xl md:text-[7rem] font-heading font-normal uppercase tracking-[0.1em] text-white drop-shadow-2xl">
-              BIET <span className="text-gray-200">DVG</span>
+            <h1 className="text-6xl md:text-[9.5rem] font-heading font-extralight uppercase tracking-[0.2em] leading-none mb-6 flex flex-wrap items-center justify-center">
+              <span className="bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/60 drop-shadow-sm px-2">BIET</span>
+              <span className="hidden md:block mx-10 w-[2px] h-24 bg-gradient-to-b from-transparent via-accent/30 to-transparent rotate-12"></span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-b from-accent via-accent/90 to-accent/50 gold-glow px-2">DVG</span>
             </h1>
             
-            <div className="w-24 h-[1px] bg-white/50 mx-auto my-8"></div>
+            <div className="flex items-center justify-center gap-8 mb-10">
+              <div className="w-16 md:w-32 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+              <div className="w-[6px] h-[6px] rounded-full bg-accent/60 shadow-[0_0_15px_rgba(197,160,89,0.8)]"></div>
+              <div className="w-16 md:w-32 h-[1px] bg-gradient-to-l from-transparent via-white/20 to-transparent"></div>
+            </div>
             
-            <p className="text-lg md:text-2xl text-gray-200 font-light tracking-[0.25em] uppercase drop-shadow-md">
-              Bapuji Institute of Engineering and Technology
-            </p>
+            <div className="overflow-hidden">
+              <motion.p 
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 1.2 }}
+                className="text-xs md:text-sm text-white/60 font-body font-light tracking-[0.8em] md:tracking-[1.2em] uppercase max-w-5xl mx-auto leading-loose"
+              >
+                Bapuji Institute of Engineering and Technology
+              </motion.p>
+            </div>
           </motion.div>
         </div>
 

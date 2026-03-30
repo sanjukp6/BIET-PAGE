@@ -5,18 +5,23 @@ import { BookOpen, Microscope, Briefcase } from 'lucide-react';
 const academicsData = [
   {
     icon: <BookOpen className="w-8 h-8 text-accent" strokeWidth={1} />,
-    title: "Undergraduate Programs",
-    desc: "B.E. across high-demand disciplines including AI & ML, Computer Science, and Core Engg."
+    title: "Academic Excellence",
+    desc: "NAAC 'A' Grade accredited with multiple NBA-accredited engineering departments."
   },
   {
     icon: <Microscope className="w-8 h-8 text-accent" strokeWidth={1} />,
-    title: "Postgraduate & Research",
-    desc: "Advancing knowledge through M.Tech, MBA, MCA and deeply integrated Research Centers."
+    title: "Research Powerhouse",
+    desc: "Over 625+ sanctioned projects and ₹4.5 Crores in research grants since inception."
+  },
+  {
+    icon: <Microscope className="w-8 h-8 text-accent" strokeWidth={1} />,
+    title: "Innovation Hub",
+    desc: "Home to the AICTE IDEA Lab and the IBM Centre of Excellence for advanced tech."
   },
   {
     icon: <Briefcase className="w-8 h-8 text-accent" strokeWidth={1} />,
-    title: "Placements & Training",
-    desc: "Robust industry ties ensuring excellent career launchpads for the BIET alumni network."
+    title: "Career & Legacy",
+    desc: "45+ years of excellence with robust industry ties and an elite global alumni network."
   }
 ];
 
@@ -45,12 +50,16 @@ const Highlights = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-24 text-center"
+          className="mb-32 text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-heading font-normal tracking-[0.1em] mb-6 text-white">
-            Academic <span className="italic text-gray-400">Excellence</span>
-          </h2>
-          <div className="w-16 h-[1px] bg-accent/50 mx-auto"></div>
+          <div className="flex items-center justify-center gap-6 mb-6">
+            <div className="w-12 h-[1px] bg-gradient-to-r from-transparent to-accent/30"></div>
+            <h2 className="text-4xl md:text-5xl font-heading font-light tracking-[0.2em] text-white uppercase">
+              Academic <span className="italic text-accent/80 font-extralight">Excellence</span>
+            </h2>
+            <div className="w-12 h-[1px] bg-gradient-to-l from-transparent to-accent/30"></div>
+          </div>
+          <div className="w-[4px] h-[4px] rounded-full bg-accent/40 mx-auto shadow-[0_0_10px_rgba(197,160,89,0.5)]"></div>
         </motion.div>
 
         <motion.div 
@@ -58,22 +67,22 @@ const Highlights = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
           {academicsData.map((highlight, index) => (
             <motion.div 
               key={index}
               variants={itemVariants}
-              className="group p-10 glass-panel rounded-sm hover:-translate-y-2 border border-white/5 hover:border-accent/30 hover:bg-white/[0.02] transition-all duration-700 cursor-pointer relative"
+              className="group p-12 glass-panel rounded-sm hover:-translate-y-3 border border-white/5 hover:border-accent/40 hover:bg-white/[0.03] transition-all duration-700 cursor-none relative overflow-hidden"
             >
               <div className="flex flex-col items-center text-center">
-                <div className="mb-8 p-0 inline-block transform group-hover:scale-110 transition-transform duration-700 ease-out">
+                <div className="mb-10 transform group-hover:scale-110 transition-transform duration-700 ease-out opacity-80 group-hover:opacity-100">
                   {highlight.icon}
                 </div>
-                <h3 className="text-xl font-heading tracking-[0.1em] text-white mb-4 group-hover:text-accent transition-colors duration-500 uppercase">
+                <h3 className="text-lg font-heading tracking-[0.2em] text-white mb-6 group-hover:text-accent transition-colors duration-500 uppercase font-light">
                   {highlight.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed font-light">
+                <p className="text-white/40 text-xs leading-[1.8] font-light tracking-widest uppercase">
                   {highlight.desc}
                 </p>
               </div>

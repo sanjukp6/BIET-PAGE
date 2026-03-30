@@ -31,17 +31,17 @@ const Navbar = () => {
             className="h-14 w-auto object-contain brightness-0 invert opacity-90 transition-all duration-500" 
             onError={(e) => e.target.style.display='none'} 
           />
-          <div className="text-xl md:text-2xl font-heading tracking-[0.2em] font-light uppercase mt-1 text-white">
-            BIET<span className="text-accent italic ml-2 font-normal">DVG</span>
+          <div className="text-lg md:text-xl font-heading tracking-[0.3em] font-light uppercase mt-1 text-white border-l border-white/10 pl-5 ml-2">
+            BIET<span className="text-accent ml-2 font-normal opacity-80 shimmer-text">DVG</span>
           </div>
         </div>
 
         <div className="hidden md:flex space-x-10">
-          {['Academics', 'Admissions', 'Campus Life'].map((item) => (
+          {['Values', 'Departments', 'Academics', 'Admissions', 'Campus Life'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase().replace(' ', '-')}`}
-              className="text-xs uppercase tracking-[0.2em] text-gray-400 hover:text-accent transition-colors duration-500 font-light"
+              className="text-[10px] uppercase tracking-[0.2em] text-gray-400 hover:text-accent transition-colors duration-500 font-light"
             >
               {item}
             </a>

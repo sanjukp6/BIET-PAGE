@@ -5,8 +5,10 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import Navbar from './components/Navbar';
 import HeroCanvas from './components/HeroCanvas';
+import InstitutionalValues from './components/InstitutionalValues';
 import EventSection from './components/EventSection';
 import Highlights from './components/Highlights';
+import DepartmentsGrid from './components/DepartmentsGrid';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 import Cursor from './components/Cursor';
@@ -36,7 +38,9 @@ function App() {
         <HeroCanvas />
 
         <div className="relative z-10 w-full bg-background">
+          <InstitutionalValues />
           <EventSection />
+          <DepartmentsGrid />
           <Highlights />
           <CTASection />
           <Footer />
